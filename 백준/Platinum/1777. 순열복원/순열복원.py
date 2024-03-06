@@ -1,12 +1,12 @@
 N = int(input())
-insin = list(map(int, input().split()))
-arr = []
+inversion = list(map(int, input().split()))
+origin = []
 
-for i in range(N):
-    if insin[i] == 0:
-        arr.append(i + 1)
+for j in range(N):
+    if inversion[j] == 0:
+        origin.append(j + 1)
     else:
-        cg = len(arr) - insin[i]
-        arr.insert(cg, i + 1)
+        pos = len(origin) - inversion[j]
+        origin.insert(pos, j + 1)
 
-print(*arr)
+print(*origin)
