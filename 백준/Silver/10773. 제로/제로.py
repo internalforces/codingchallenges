@@ -4,10 +4,10 @@ for i in range(n):
     k = int(input())
     a.append(k)
 
-answer = []
+stack = []
 for i in a:
     if i == 0:
-        del answer[-1]
+        stack.pop() if stack else None
     else:
-        answer.append(i)
-print(sum(answer))
+        stack.append(i)
+print(sum(stack))
