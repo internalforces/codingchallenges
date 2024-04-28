@@ -1,19 +1,19 @@
-def cut_paper(init_y, init_x, length):
-    init_color = colored_paper[init_y][init_x]
+def cut_paper(x, y, length):
+    color = colored_paper[x][y]
     is_identical = True
-    for i in range(init_y, init_y + length):
-        for j in range(init_x, init_x + length):
-            if init_color != colored_paper[i][j]:
+    for i in range(x, x + length):
+        for j in range(y, y + length):
+            if color != colored_paper[i][j]:
                 is_identical = False
                 break
 
     if is_identical:
-        color_counter[init_color] += 1
+        color_counter[color] += 1
     else:
-        cut_paper(init_y, init_x, length // 2)
-        cut_paper(init_y + length // 2, init_x, length // 2)
-        cut_paper(init_y, init_x + length // 2, length // 2)
-        cut_paper(init_y + length // 2, init_x + length // 2, length // 2)
+        cut_paper(x, y, length // 2)
+        cut_paper(x + length // 2, y, length // 2)
+        cut_paper(x, y + length // 2, length // 2)
+        cut_paper(x + length // 2, y + length // 2, length // 2)
 
 
 N = int(input())
