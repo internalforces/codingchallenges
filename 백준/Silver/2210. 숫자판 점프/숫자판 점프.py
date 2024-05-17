@@ -10,10 +10,8 @@ def dfs(x, y, number):
         a = x + dx[k]
         b = y + dy[k]
 
-        if 0 <= a< 5 and 0 <= b < 5:  # 범위 내에 있다면
-            dfs(a, b, number + matrix[a][b])  # 6글자가 될 때 까지 재귀
-
-
+        if 0 <= a< 5 and 0 <= b < 5:  
+            dfs(a, b, number + matrix[a][b])  
 
 matrix = [list(map(str, input().split())) for _ in range(5)]
 
