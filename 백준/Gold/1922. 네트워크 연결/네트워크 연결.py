@@ -1,5 +1,8 @@
-V=int(input())
-E=int(input())
+import sys
+input = lambda: sys.stdin.readline().rstrip()
+
+V = int(input())
+E = int(input())
 edges = []
 for _ in range(E):
     A, B, C = map(int, input().split())
