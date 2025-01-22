@@ -1,6 +1,8 @@
 def solution(n):
+    # f(n) = 4f(n - 2) - f(n - 4)
+    # f(0) = 1, f(2) = 3, f(4) = 11
     if n % 2 != 0:
-        return 0
+        return 0 
     if n == 2:
         return 3
     if n == 4:
