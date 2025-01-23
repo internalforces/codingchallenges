@@ -1,7 +1,7 @@
 def solution(h1, m1, s1, h2, m2, s2):
     answer = 0
-    hcount = 0
-    mcount = 0
+    #hcount = 0
+    #mcount = 0
     
     start = h1 * 3600 + m1 * 60 + s1
     end = h2 * 3600 + m2 * 60 + s2
@@ -31,14 +31,14 @@ def solution(h1, m1, s1, h2, m2, s2):
             
             
         if s < h and ns >= nh :
-            hcount += 1
+            answer += 1
             
         if s < m and ns >= nm :
-            mcount += 1
+            answer += 1
             
         if ns == nm == nh :
             answer -= 1
             
-    answer += hcount + mcount
+    #answer += hcount + mcount
     print(answer)
     return answer
