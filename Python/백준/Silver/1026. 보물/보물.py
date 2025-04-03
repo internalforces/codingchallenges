@@ -8,11 +8,10 @@ a = list(map(int, input().split()))
 b = list(map(int, input().split()))
 
 a.sort()
+b = sorted(b, reverse=True)
 
 result = 0
 for i in range(len(a)):
-    b_max = max(b)
-    result += a[i] * b_max
-    b.remove(b_max)
+    result += a[i] * b[i]
 
 print(result)
