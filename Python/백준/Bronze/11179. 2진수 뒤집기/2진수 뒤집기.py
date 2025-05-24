@@ -3,7 +3,7 @@ import sys
 input = sys.stdin.readline
 
 n = int(input())
-a = bin(n)[2:]
-a = a[::-1]
-a = int(a, 2)
-print(a)
+n = bin(n)[2:]
+n = n[::-1]
+n = int(n, 2)
+print(n)
