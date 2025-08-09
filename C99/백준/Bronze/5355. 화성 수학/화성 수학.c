@@ -10,7 +10,7 @@ int main(void) {
         scanf("%lf", &x);
 
         int ch;
-        while ((ch = getchar()) != '\n' && ch != EOF) {
+        while ((ch = getchar()) != '\n') {
             if (ch == ' '){
                 continue;
             }
