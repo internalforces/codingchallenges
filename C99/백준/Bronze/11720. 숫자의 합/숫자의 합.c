@@ -5,7 +5,7 @@ int main(){
     int n;
     scanf("%d", &n);
     
-    char *numbers = (char *)malloc((n + 1) * sizeof(char));
+    char numbers[101];
     scanf("%s", numbers);
     
     int sum = 0;
@@ -14,7 +14,6 @@ int main(){
     }
     
     printf("%d\n", sum);
-    free(numbers);
     
     return 0;
 }
