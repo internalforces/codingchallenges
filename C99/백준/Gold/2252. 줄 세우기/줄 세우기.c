@@ -10,7 +10,8 @@ Node** graph;
 int* indegree;
 int* queue_arr;
 int* result;
-int front = 0, rear = 0;
+int front = 0;
+int rear = 0;
 
 void addEdge(int from, int to) {
     Node* newNode = (Node*)malloc(sizeof(Node));
@@ -35,7 +36,8 @@ int isEmpty() {
 
 int topologicalSort(int n) {
     int count = 0;
-    front = rear = 0;
+    front = 0;
+    rear = 0;
 
     for (int i = 1; i <= n; i++) {
         if (indegree[i] == 0) {
@@ -64,12 +66,12 @@ int main() {
     int n, m;
     scanf("%d %d", &n, &m);
 
-    graph    = (Node**)malloc((n + 1) * sizeof(Node*));
+    graph = (Node**)malloc((n + 1) * sizeof(Node*));
 
     indegree = (int*)calloc(n + 1, sizeof(int));
 
-    queue_arr= (int*)malloc((n + 1) * sizeof(int));
-    result   = (int*)malloc((n + 1) * sizeof(int));
+    queue_arr = (int*)malloc((n + 1) * sizeof(int));
+    result = (int*)malloc((n + 1) * sizeof(int));
 
     for (int i = 1; i <= n; i++) {
         graph[i] = NULL;
